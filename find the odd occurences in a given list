@@ -1,0 +1,16 @@
+def printTwoOdd(lst, size):
+    lst.sort()
+    m = {}
+    for i in range(size):
+        if lst[i] not in m:
+            m[lst[i]] = 0
+             
+        m[lst[i]] += 1
+    print("The two ODD elements are ", end = "")
+    for x in m:
+        if (m[x] % 2 != 0):
+            print(x, end = ", ")
+lst = [7,2,5,2,7,3,2,7,5,2 ]
+lst_size = len(lst)
+ 
+printTwoOdd(lst, lst_size)
